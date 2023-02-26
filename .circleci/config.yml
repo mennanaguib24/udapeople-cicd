@@ -2,10 +2,10 @@ version: 2.1
 orbs
   slack: circleci/slack@4.9.3
 
-  commands:
-    notify_on_failure:
-      steps:
-        -slack/notify:
+commands:
+  notify_on_failure:
+    steps:
+      - slack/notify:
           event: fail
           channel: cicd-pipline
           template: basic_fail_1
@@ -309,7 +309,7 @@ jobs:
 
   notify_on_success:
     docker:
-      -image: cimg/base
+      - image: cimg/base
     steps:
       - slack/notify:
         event: pass
