@@ -15,7 +15,7 @@ commands:
       description: install Ansible v2
       steps:
         - run:
-          name: instal Ansible v2
+          name: install Ansible v2
           command :
             sudo apt update
             sudo apt install software-properties-common
